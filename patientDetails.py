@@ -81,36 +81,18 @@ def patientDetailsFunction():
             return count
 
 
-    def returnAvailable():
-            select_cmd='''SELECT  * FROM drDetailsTable'''
-            result=doctorCursor.execute(select_cmd)
-            for data in result:
-                return (f"{data[4]}")
-    # returnAvailable()
 
-    # choice=input('Do you want to check if doctors are available? type yes/no: ')
-    # if(choice.lower()=="yes"):
-    #         # try:        
-    #             if(searchDoctors()==0):
-    #                 # em=input("Confirm emergency(y/n): ")
-    #                 # # if(em.lower()!='y'):
-    #                 print('Sorry,no doctors are available at the moment')
+    choice=input('Do you want to check if doctors are available? type yes/no: ')
+    if(choice.lower()=="yes"):
+        try:        
+            if(searchDoctors()==0):
+                    em=input("Confirm emergency(y/n): ")
+                    if(em.lower()!='y'):
+                     print('Sorry,no doctors are available at the moment')
                     
-    #         # except:
-    #             # if(em.lower()=='y'):
-    #             #     print("Please refer to hotline number below: \n 1618-01-4288919")
-
-    # choice=input('Do you want to check if doctors are available? type yes/no: ')
-    # if(choice.lower()=="yes"):
-    #     try:        
-    #         if(searchDoctors()==0):
-    #                 # em=input("Confirm emergency(y/n): ")
-    #                 # # if(em.lower()!='y'):
-    #                 print('Sorry,no doctors are available at the moment')
-                    
-    #     except:
-    #             # if(em.lower()=='y'):
-    #             #     print("Please refer to hotline number below: \n 1618-01-4288919")       
+        except:
+                if(em.lower()=='y'):
+                    print("Please refer to hotline number below: \n 1618-01-4288919")       
     
 
 
